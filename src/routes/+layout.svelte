@@ -17,10 +17,8 @@
             <a class="nav-link active" aria-current="page" href="/projects">Projekte</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/">Features</a>
+            <a class="nav-link active" aria-current="page" href="/personal">Personalliste</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/">Pricing</a>
         </ul>
       </div>
     </div>
