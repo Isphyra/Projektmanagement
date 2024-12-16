@@ -16,7 +16,7 @@
       {#each data.projects as project}
         <div class="col-md-3 mb-4">
           <div class="card bg-dark text-light shadow">
-            <img src={project.poster} class="card-img-top" alt={project.title} />
+            <img src={project.poster} class="card-img-top" alt={project.name} />
             <div class="card-body">
               <h5>
                 <a href={`/projects/${projects._id}`} class="card-title no-underline">{projects.name}</a>

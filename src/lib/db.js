@@ -28,7 +28,7 @@ async function getProjects() {
 async function getMovie(id) {
   let movie = null;
   try {
-    const collection = db.collection("movies");
+    const collection = db.collection("projects");
     const query = { _id: new ObjectId(id) };
     movie = await collection.findOne(query);
 
