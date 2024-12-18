@@ -9,3 +9,4 @@
     <p>Enddatum: {project.endDate}</p>
     <p>Status: {project.status}</p>
 </div>
+

@@ -17,7 +17,7 @@ async function getProjects() {
       const query = {};
       projects = await collection.find(query).toArray();
       projects.forEach((project) => {
-        projects._id = project._id.toString();
+        project._id = project._id.toString();
       });
     } catch (error) {
       console.log(error);
@@ -43,13 +43,13 @@ async function getMovie(id) {
   return movie;
 }
 
-async function createMovie(movie) {
+async function createProject(project) {
     movie.poster = "/images/placeholder.webp"; // Default-Poster
     movie.actors = [];
     movie.watchlist = false;
 
     try {
-        const collection = db.collection("movies");
+        const collection = db.collection("projects");
         const result = await collection.insertOne(movie);
         return result.insertedId.toString(); // ObjectId als String zurückgeben
     } catch (error) {
