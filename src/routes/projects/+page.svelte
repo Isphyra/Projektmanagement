@@ -3,13 +3,16 @@
     let { data } = $props();
   </script>
   
-  <div class="container mt-5">
-    <div class="container text-left">
+  <header class="container mt-5">
+    <div class="container text-center">
       <h1>Projektliste</h1>
-      <p><em>Daten und Bilder generiert von ChatGPT und DALL-E</em></p>
-      <a href="/projects/create" class="btn btn-primary">Add New project</a>
+      <p>Diese Seite dient zur Verwaltung von Projekten. Sie bietet eine Übersicht über aktuelle Projekte, einschließlich 
+      einer kurzen Beschreibung und ansprechender Visualisierungen. Über die Schaltfläche "Neues Projekt erstellen" können neue 
+      Projekte hinzugefügt werden.
+    </p>
+      <a href="/projects/create" class="btn btn-primary">Neues Projekt erstellen</a>
     </div>
-  </div>
+  </header>
 
   <div class="container text-left mt-3">
     <div class="row">
@@ -28,6 +31,7 @@
         </div>
       {/each}
     </div>
+    <p><em>Daten und Bilder generiert von ChatGPT und DALL-E</em></p>
   </div>
   
   <style>

@@ -1,30 +1,50 @@
 <script>
-    //import "./style.css";
-    let {children} = $props();
+  import "./styles.css";
+  let { children } = $props();
 </script>
-<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
-    <div class="container-fluid" >
-      <a class="navbar-brand" href="/">
-        <img src="/images/logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-        Projekt Manager
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/projects">Projekte</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/personal">Personalliste</a>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img
+        src="/images/logo.png"
+        alt="Logo"
+        width="30"
+        height="30"
+        class="d-inline-block align-text-top"
+      />
+      Projekt Manager
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/projects"
+            >Projekte</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/personal"
+            >Personalliste</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/login">Login</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-
-<div class = "containe mt-3">
-{@render children()}
+<div class="containe mt-3">
+  {@render children()}
 </div>
