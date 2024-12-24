@@ -3,14 +3,14 @@
     let { data } = $props();
   </script>
   
-  <header class="container mt-5">
+  <header class="container mb-5 mt-3">
     <div class="container text-center">
       <h1>Projektliste</h1>
       <p>Diese Seite dient zur Verwaltung von Projekten. Sie bietet eine Übersicht über aktuelle Projekte, einschließlich 
       einer kurzen Beschreibung und ansprechender Visualisierungen. Über die Schaltfläche "Neues Projekt erstellen" können neue 
       Projekte hinzugefügt werden.
     </p>
-      <a href="/projects/create" class="btn btn-primary">Neues Projekt erstellen</a>
+      <a href="/projects/create" class="btn btn-dark">Neues Projekt erstellen</a>
     </div>
   </header>
 

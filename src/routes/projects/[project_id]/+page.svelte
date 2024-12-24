@@ -4,7 +4,7 @@
   </script>
   
   <div class="container mt-4">
-    <a href="/projects" class="btn btn-primary">Zurück zu Liste</a>
+    <a href="/projects" class="btn btn-dark mb-3">Zurück zu Liste</a>
     <div>
   </div>
   <h1>{project.name}</h1>

@@ -4,7 +4,7 @@
   let { form } = $props();
 </script>
 <div class="container mt-4">
-  <a href="/projects" class="btn btn-primary">Zurück zu Liste</a>
+  <a href="/projects" class="btn btn-dark">Zurück zu Liste</a>
 <h1>Neues Projekt erstellen</h1>
 <form method="POST" action="?/create">
   <div class="mb-3">
