@@ -7,8 +7,7 @@
     <div class="container text-center">
       <h1>Projektliste</h1>
       <p>Diese Seite dient zur Verwaltung von Projekten. Sie bietet eine Übersicht über aktuelle Projekte, einschliesslich 
-      einer kurzen Beschreibung und ansprechender Visualisierungen. Über die Schaltfläche "Neues Projekt erstellen" können neue 
-      Projekte hinzugefügt werden.
+      einer kurzen Beschreibung. Über die Schaltfläche "Neues Projekt erstellen" können neue Projekte hinzugefügt werden.
     </p>
       <a href="/projects/create" class="btn btn-dark">Neues Projekt erstellen</a>
     </div>
@@ -24,8 +23,8 @@
               <h5>
                 <a href={`/projects/${project._id}`} class="card-title no-underline">{project.name}</a>
               </h5>
-              <p class="card-text">Beschreibung: {project.description}</p>
-              <p class="card-text">Status: {project.status}</p>
+              <p class="card-text"><strong>Beschreibung:</strong> {project.description}</p>
+              <p class="card-text"><strong>Status:</strong>{project.status}</p>
             </div>
           </div>
         </div>
