@@ -224,4 +224,5 @@ export default {
   getPersonal,
   createPersonal,
   updatePersonal,
+  deletePersonal
 };

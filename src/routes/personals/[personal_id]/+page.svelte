@@ -15,7 +15,7 @@
 
                 <form method="POST" action="?/delete">
                     <input type="hidden" name="id" value={personal._id} />
-                    <button class="btn btn-danger">Projekt löschen</button>
+                    <button class="btn btn-danger">Mitarbiter/in löschen</button>
                 </form>
             </div>
         </div>

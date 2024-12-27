@@ -11,7 +11,7 @@ export const actions = {
     delete: async ({ request }) => {
         const data = await request.formData();
 
-        await db.deleteProject(data.get("id"));
+        await db.deletePersonal(data.get("id"));
         redirect(303, "/personals");
     },
 };
