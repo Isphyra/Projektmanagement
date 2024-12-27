@@ -9,8 +9,9 @@
             <a href={`/projects/${project._id}`} class="card-title no-underline">{project.name}</a>
           </h5>
         <p><strong>Beschreibung:</strong> {project.description}</p>
-        <p><strong>Startdatum:</strong> {project.startDate}</p>
+        <!--<p><strong>Startdatum:</strong> {project.startDate}</p>
         <p><strong>Enddatum:</strong> {project.endDate}</p>
+        -->
         <p class="card-status"><strong>Status:</strong> {project.status}</p>
     </div>
     <div class="card-footer text-center mb-3">
