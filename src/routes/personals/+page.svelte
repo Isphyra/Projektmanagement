@@ -7,7 +7,7 @@
     <div class="container text-center">
       <h1>Personalliste</h1>
       <p>Diese Seite dient zur Verwaltung von Personalen.</p>
-      <a href="/personal/create" class="btn btn-dark">Neue Mitarbeiter/innen hinzufügen</a>
+      <a href="/personals/create" class="btn btn-dark">Neue Mitarbeiter/innen hinzufügen</a>
     </div>
     <table class="table">
       <thead>

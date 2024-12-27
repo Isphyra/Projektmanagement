@@ -79,10 +79,10 @@ async function updateProject(project) {
     const result = await collection.updateOne(query, { $set: project });
 
     if (result.matchedCount === 0) {
-      console.log("No project with id " + id);
+      console.log("Kein Projekt mit Id " + id);
       // TODO: errorhandling
     } else {
-      console.log("Project with id " + id + " has been updated.");
+      console.log("Projekt mit Id " + id + " wurde erfolgreich gelöscht.");
       return id;
     }
   } catch (error) {
@@ -101,9 +101,9 @@ async function deleteProject(id) {
     const result = await collection.deleteOne(query);
 
     if (result.deletedCount === 0) {
-      console.log("No project with id " + id);
+      console.log("Kein Projekt mit Id " + id);
     } else {
-      console.log("Project with id " + id + " has been successfully deleted.");
+      console.log("Projekt mit Id " + id + " wurde erfolgreich gelöscht.");
       return id;
     }
   } catch (error) {
@@ -158,8 +158,60 @@ async function getPersonal(id) {
   }
   return personal;
 }
+async function createPersonal(personal) {
+  try {
+    const collection = db.collection("personal");
+    const result = await collection.insertOne(personal);
+    return result.insertedId.toString(); // convert ObjectId to String
+  } catch (error) {
+    // TODO: errorhandling
+    console.log(error.message);
+  }
+  return null;
+}
+
+async function updatePersonal(personal) {
+  try {
+    let id = personal._id;
+    delete personal._id; 
+    const collection = db.collection("personal");
+    const query = { _id: new ObjectId(id) }; // filter by id
+    const result = await collection.updateOne(query, { $set: personal });
+
+    if (result.matchedCount === 0) {
+      console.log("Kein Personal mit Id " + id);
+      // TODO: errorhandling
+    } else {
+      console.log("Personal mit Id " + id + " wurde erfolgreich gelöscht.");
+      return id;
+    }
+  } catch (error) {
+    // TODO: errorhandling
+    console.log(error.message);
+  }
+  return null;
+}
 
 
+async function deletePersonal(id) {
+  try {
+    const collection = db.collection("personal");
+    const query = { _id: new ObjectId(id) }; 
+    const result = await collection.deleteOne(query);
+
+    if (result.deletedCount === 0) {
+      console.log("Kein Personal mit Id " + id);
+    } else {
+      console.log("Personal mit Id " + id + " wurde erfolgreich gelöscht.");
+      return id;
+    }
+  } catch (error) {
+    // TODO: errorhandling
+    console.log(error.message);
+  }
+  return null;
+
+}
 
 // Am Schluss alle hier definierten Funktionen exportieren
 export default {
@@ -170,4 +222,6 @@ export default {
   deleteProject,
   getPersonals,
   getPersonal,
+  createPersonal,
+  updatePersonal,
 };

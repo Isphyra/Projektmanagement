@@ -11,7 +11,7 @@
         <div class="col-3">
             <div class="col">
                 <h2>{personal.role}</h2>
-                <p>Enddatum: {personal.email}</p>
+                <p><strong> Email Adresse: </strong> {personal.email}</p>
 
                 <form method="POST" action="?/delete">
                     <input type="hidden" name="id" value={personal._id} />

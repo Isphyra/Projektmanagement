@@ -12,7 +12,7 @@
     <input name="name" class="form-control" type="text" />
   </div>
   <div class="mb-3">
-    <label for="" class="form-label">Beschreibung</label>
+    <label for="" class="form-label">Beschreibung:</label>
     <input name="description" class="form-control" type="text" />
   </div>
   <div class="mb-3">
@@ -24,7 +24,7 @@
     <input name="endDate" class="form-control" type="date" />
   </div>
   <div class="mb-3">
-    <label for="" class="form-label">Personal</label>
+    <label for="" class="form-label">Personal:</label>
     <input name="teamMembers" class="form-control" type="text" placeholder="Personal, seperieren mit einem Komma" />
   </div>
   <button type="submit" class="btn btn-primary">Projekt hinzufügen</button>
