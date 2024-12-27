@@ -13,26 +13,22 @@
         <p><strong>Enddatum:</strong> {project.endDate}</p>
         <p class="card-status"><strong>Status:</strong> {project.status}</p>
     </div>
-    <div class="card-footer">
+    <div class="card-footer text-center mb-3">
         {#if project.projectlist}
             <form method="POST" action="?/removeFromFav" use:enhance>
                 <input type="hidden" name="id" value={project._id} />
-                <button class="btn btn-danger">Von Favoritenliste entfernen</button>
+                <button class="btn btn-secondary">Von Favoritenliste entfernen</button>
             </form>
         {:else}
             <form method="POST" action="?/addToFav" use:enhance>
                 <input type="hidden" name="id" value={project._id} />
-                <button class="btn btn-success">Auf die Favoritenliste</button>
+                <button class="btn btn-light">Auf die Favoritenliste</button>
             </form>
         {/if}
     </div>
 </div>
 
 <style>
-    .container {
-      max-width: 1200px;
-    }
-  
     .no-underline {
       text-decoration: none;
     }
