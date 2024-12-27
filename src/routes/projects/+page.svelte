@@ -1,5 +1,5 @@
 <script>
-    import ComponentFilme from "$lib/components/projects.svelte";
+    import Component from "$lib/components/projects.svelte";
     let { data } = $props();
   </script>
   
@@ -24,7 +24,7 @@
                 <a href={`/projects/${project._id}`} class="card-title no-underline">{project.name}</a>
               </h5>
               <p class="card-text"><strong>Beschreibung:</strong> {project.description}</p>
-              <p class="card-text"><strong>Status:</strong>{project.status}</p>
+              <p class="card-status"><strong>Status:</strong>{project.status}</p>
             </div>
           </div>
         </div>
@@ -45,5 +45,9 @@
   
     .no-underline:hover {
       text-decoration: underline;
+    }
+   .card-status
+    {
+      color: rgb(132, 122, 207);
     }
   </style>

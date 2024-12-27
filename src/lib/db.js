@@ -114,12 +114,60 @@ async function deleteProject(id) {
 
 }
 
+//////////////////////////////////////////
+// personal
+//////////////////////////////////////////
+// Get all personals
+async function getPersonals() {
+  let personals = [];
+  try {
+    const collection = db.collection("personal");
 
-// export all functions so that they can be used in other files
+    // You can specify a query/filter here
+    // See https://www.mongodb.com/docs/drivers/node/current/fundamentals/crud/query-document/
+    const query = {};
+
+    // Get all objects that match the query
+    personals = await collection.find(query).toArray();
+    personals.forEach((personals) => {
+      personals._id = personals._id.toString(); // convert ObjectId to String
+    });
+    //console.log(personals)
+  } catch (error) {
+    // TODO: errorhandling
+  }
+  return personals;
+}
+// Get personal by id
+async function getPersonal(id) {
+  let personal = null;
+  try {
+    const collection = db.collection("personal");
+    const query = { _id: new ObjectId(id) }; // filter by id
+    personal = await collection.findOne(query);
+
+    if (!personal) {
+      console.log("No personal with id " + id);
+      // TODO: errorhandling
+    } else {
+      personal._id = personal._id.toString(); // convert ObjectId to String
+    }
+  } catch (error) {
+    // TODO: errorhandling
+    console.log(error.message);
+  }
+  return personal;
+}
+
+
+
+// Am Schluss alle hier definierten Funktionen exportieren
 export default {
   getProjects,
   getProject,
   createProject,
   updateProject,
   deleteProject,
+  getPersonals,
+  getPersonal,
 };
