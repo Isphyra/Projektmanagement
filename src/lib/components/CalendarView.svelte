@@ -1,10 +1,10 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount } from "svelte";
 
   let events = [
-    { id: 1, title: 'Projekt Kickoff', date: '2024-12-01' },
-    { id: 2, title: 'Deadline Design Phase', date: '2024-12-05' },
-    { id: 3, title: 'Review Meeting', date: '2024-12-10' }
+    { id: 1, title: "Projekt Kickoff", date: "2024-12-01" },
+    { id: 2, title: "Deadline Design Phase", date: "2024-12-05" },
+    { id: 3, title: "Review Meeting", date: "2024-12-10" },
   ];
 
   let today = new Date();
@@ -50,6 +50,36 @@
   };
 </script>
 
+<div class="calendar">
+  <div class="calendar-header">
+    <button on:click={prevMonth}>&lt; Vorheriger Monat</button>
+    <h2>
+      {new Date(currentYear, currentMonth).toLocaleDateString("de-DE", {
+        month: "long",
+        year: "numeric",
+      })}
+    </h2>
+    <button on:click={nextMonth}>Nächster Monat &gt;</button>
+  </div>
+
+  <div class="calendar-grid">
+    {#each ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"] as day}
+      <div class="day"><strong>{day}</strong></div>
+    {/each}
+
+    {#each calendarDays as day}
+      <div class="day">
+        {#if day}
+          <span>{day.getDate()}</span>
+          {#each events.filter((event) => new Date(event.date).toDateString() === day.toDateString()) as event}
+            <div class="event">{event.title}</div>
+          {/each}
+        {/if}
+      </div>
+    {/each}
+  </div>
+</div>
+
 <style>
   .calendar {
     display: grid;
@@ -80,35 +110,10 @@
   }
 
   .event {
-    background: #007acc;
+    background: #cc0058;
     color: white;
     padding: 0.2rem 0.5rem;
     border-radius: 0.3rem;
     font-size: 0.8rem;
   }
 </style>
-
-<div class="calendar">
-  <div class="calendar-header">
-    <button on:click="{prevMonth}">&lt; Vorheriger Monat</button>
-    <h2>{new Date(currentYear, currentMonth).toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })}</h2>
-    <button on:click="{nextMonth}">Nächster Monat &gt;</button>
-  </div>
-
-  <div class="calendar-grid">
-    {#each ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'] as day}
-      <div class="day"><strong>{day}</strong></div>
-    {/each}
-
-    {#each calendarDays as day}
-      <div class="day">
-        {#if day}
-          <span>{day.getDate()}</span>
-          {#each events.filter(event => new Date(event.date).toDateString() === day.toDateString()) as event}
-            <div class="event">{event.title}</div>
-          {/each}
-        {/if}
-      </div>
-    {/each}
-  </div>
-</div>
