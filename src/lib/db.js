@@ -56,8 +56,8 @@ async function getProject(id) {
 async function createProject(project) {
   project.poster = "/images/placeholder.webp"; // default poster
   //project.teamMebers = [];
-  //project.watchlist = false;
-  project.status = "Not Started"
+  project.status = "In Progress"
+  project.projectlist = false;
   try {
     const collection = db.collection("projects");
     const result = await collection.insertOne(project);
