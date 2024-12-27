@@ -38,7 +38,7 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/login">Login</a>
+          <a class="nav-link active" aria-current="page" href="/calendar">Kalender</a>
         </li>
       </ul>
     </div>
