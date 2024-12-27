@@ -1,6 +1,17 @@
 <script>
   import Project from "$lib/components/projects.svelte";
-  let { data } = $props();
+    //import { derived } from "svelte/store";
+  let { data, filterByFavList } = $props();
+
+  let projects = $derived.by(() => {
+
+    if (filterByFavList) {
+      
+      let projectsFiltered = data.projects.filter((project) => movie.projectlist);
+      return projectsFiltered;
+    }
+    return data.projects;
+  });
 </script>
 
 <div class="container mb-5 mt-5">
@@ -11,8 +22,22 @@
 </p>
   <a href="/projects/create" class="btn btn-dark">Neues Projekt erstellen</a>
 </div>
+
+<!-- Favoriten -->
+<div class="form-check mt-3">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    id="filter"
+    bind:checked={filterByFavList}
+  />
+  <label class="form-check-label" for="filter" >
+    Meine Favoriten anzeigen
+  </label>
+</div>
 </div>
 
+<!--Auflistung-->
 <div class="container text-left mt-3">
 <div class="row">
   {#each data.projects as project}
