@@ -48,6 +48,6 @@
     }
    .card-status
     {
-      color: rgb(132, 122, 207);
+      color: rgb(255, 0, 85);
     }
   </style>
