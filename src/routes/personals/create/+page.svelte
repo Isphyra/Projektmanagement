@@ -8,7 +8,7 @@
   <form method="POST" action="?/create">
     <div class="mb-3">
       <label for="" class="form-label">Name des Mitarbeiter/in:</label>
-      <input name="name" class="form-control" type="text" />
+      <input name="name" class="form-control" type="text" placeholder="Mit Vor- und Nachname"/>
     </div>
     <div class="mb-3">
       <label for="" class="form-label">Rolle des Mitarbeiter/in </label>
