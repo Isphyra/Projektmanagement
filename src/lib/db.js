@@ -214,6 +214,22 @@ async function deletePersonal(id) {
 
 }
 
+//////////////////////////////////////////
+// user data
+//////////////////////////////////////////
+
+// Handle user data submission
+async function createUser(user) {
+  try {
+    const collection = db.collection("users"); // Verwende eine neue Collection 'users'
+    const result = await collection.insertOne(user);
+    return result.insertedId.toString(); // convert ObjectId to String
+  } catch (error) {
+    console.log(error.message); // TODO: errorhandling
+  }
+  return null;
+}
+
 // Am Schluss alle hier definierten Funktionen exportieren
 export default {
   getProjects,
@@ -225,4 +241,5 @@ export default {
   getPersonal,
   createPersonal,
   deletePersonal,
+  createUser
 };
