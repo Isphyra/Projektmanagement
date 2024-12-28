@@ -1,11 +1,12 @@
 <script>
   import { onMount } from "svelte";
 
-  let events = [
+  let events = [/*
     { id: 1, title: "Projekt Kickoff", date: "2024-12-01" },
     { id: 2, title: "Deadline Design Phase", date: "2024-12-05" },
-    { id: 3, title: "Review Meeting", date: "2024-12-10" },
+    { id: 3, title: "Review Meeting", date: "2024-12-10" },*/
   ];
+  
 
   let today = new Date();
   let currentMonth = today.getMonth();
