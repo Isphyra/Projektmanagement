@@ -1,29 +1,28 @@
 <script>
-    import UserForm from "$lib/components/userForm.svelte";
+    import db from '$lib/db.js'; // Import der Funktion aus db.js
+    
+    let userform = {
+      vorname: '',
+      nachname: ''
+    };
+  
+    function handleUserData() {
+      try {
+        const message = db.handleData(userform); // Aufruf der Funktion
+        alert(message); 
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+  </script>
 
-//Formular
-let userform = $state({
-    vorname: "",
-    nachname: ""  
-})
-function handleData() {
-    alert("Hallo " + userform.vorname + " " + userform.nachname);
-}
-</script>
-
-    <!-- Formular --> 
-    <form onsubmit={handleData}>
-        <div class=mb-3>
-            <label class="form-label" for="">Vorname</label>
-            <input bind:value={userform.vorname} class = "form-control" type="text"> 
-        </div>
-
-        <div class=mb-3>
-            <label class="form-label" for="">Nachname</label>
-            <input bind:value={userform.nachname} class = "form-control" type="text"> 
-        </div>
-
-        <button type="submit" class= "btn btn-primary"> Submit </button>
-
-    </form>
-
+  <form on:submit|preventDefault={handleUserData}>
+    <label for="vorname">Vorname:</label>
+    <input id="vorname" bind:value={userform.vorname} type="text" required />
+    
+    <label for="nachname">Nachname:</label>
+    <input id="nachname" bind:value={userform.nachname} type="text" required />
+    
+    <button type="submit">Absenden</button>
+  </form>
+  

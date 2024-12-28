@@ -170,6 +170,7 @@ async function createPersonal(personal) {
   return null;
 }
 
+/*
 async function updatePersonal(personal) {
   try {
     let id = personal._id;
@@ -191,7 +192,7 @@ async function updatePersonal(personal) {
   }
   return null;
 }
-
+*/
 
 async function deletePersonal(id) {
   try {
@@ -212,6 +213,13 @@ async function deletePersonal(id) {
   return null;
 
 }
+function handleData(userform) {
+  if (userform && userform.vorname && userform.nachname) {
+      return "Hallo ${userform.vorname} ${userform.nachname}";
+  } else {
+      throw new Error("Ungültige Benutzerdaten");
+  }
+}
 
 // Am Schluss alle hier definierten Funktionen exportieren
 export default {
@@ -223,6 +231,6 @@ export default {
   getPersonals,
   getPersonal,
   createPersonal,
-  updatePersonal,
-  deletePersonal
+  deletePersonal,
+  handleData
 };
