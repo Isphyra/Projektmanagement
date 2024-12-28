@@ -213,13 +213,6 @@ async function deletePersonal(id) {
   return null;
 
 }
-function handleData(userform) {
-  if (userform && userform.vorname && userform.nachname) {
-      return "Erfolgreich eingelogt ${userform.vorname} ${userform.nachname}";
-  } else {
-      throw new Error("Ungültige Benutzerdaten");
-  }
-}
 
 // Am Schluss alle hier definierten Funktionen exportieren
 export default {
@@ -232,5 +225,4 @@ export default {
   getPersonal,
   createPersonal,
   deletePersonal,
-  handleData,
 };
