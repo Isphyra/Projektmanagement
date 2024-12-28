@@ -1,12 +1,12 @@
 <script>
   import Project from "$lib/components/projects.svelte";
     //import { derived } from "svelte/store";
-  let { data, filterByFavList } = $props();
+  let { data, filterByFavList = false } = $props();
 
   let projects = $derived.by(() => {
 
     if (filterByFavList) {
-      
+
       let projectsFiltered = data.projects.filter((project) => movie.projectlist);
       return projectsFiltered;
     }
@@ -36,9 +36,12 @@
   </label>
 </div>
 </div>
+<!--Divider-->
+
 
 <!--Auflistung-->
 <div class="container text-left mt-3">
+  <hr>
 <div class="row">
   {#each data.projects as project}
     <div class="col-md-3 mb-4">
@@ -46,6 +49,7 @@
     </div>
   {/each}
 </div>
+<hr>
 <p><em>Daten und Bilder generiert von ChatGPT und DALL-E</em></p>
 </div>
 <style>

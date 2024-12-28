@@ -6,8 +6,9 @@
 <div class="container mb-5 mt-5">
     <div class="container text-center">
       <h1>Personalliste</h1>
-      <p>Diese Seite dient zur Verwaltung von Personalen.</p>
+      <p>Diese Seite dient zur Verwaltung der Mitarbeiter und Mittarbeiterinnen.</p>
       <a href="/personals/create" class="btn btn-dark">Neue Mitarbeiter/innen hinzufügen</a>
+    <hr>
     </div>
     <table class="table">
       <thead>
@@ -38,5 +39,6 @@
         {/each}
       </tbody>
     </table>
+
     <p><em>Daten wurden generiert von ChatGPT</em></p>
   </div>
