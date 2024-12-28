@@ -3,5 +3,7 @@
     <img src = "/images/startseite.webp" alt = "Startseite" width="400" height="400" class="mt-5"/>
       <h1 class="mb-3 mt-5">Protoyping LN2</h1>
       <h2>Projekt von Nicolas Stanislas Sauter</h2>
+      <a href="/login" class="btn btn-dark mt-3">Zum Login</a>
+      
     </div>
 </body>
