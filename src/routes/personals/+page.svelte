@@ -1,4 +1,5 @@
 <script>
+    import CompInfoText from "$lib/components/CompInfoText.svelte";
       let { data } = $props();
       import Component from "$lib/components/personal.svelte";
 </script>
@@ -40,5 +41,5 @@
       </tbody>
     </table>
 
-    <p><em>Daten wurden generiert von ChatGPT</em></p>
-  </div>
+<CompInfoText></CompInfoText>  
+</div>

@@ -1,3 +1,6 @@
+<script>
+    import CompInfoText from "$lib/components/CompInfoText.svelte";
+</script>
 <body>
     <div class="container text-center mb-5 mt-5">
     <img src = "/images/startseite.webp" alt = "Startseite" width="400" height="400" class="mt-5"/>
@@ -6,4 +9,6 @@
       <a href="/login" class="btn btn-dark mt-3">Zum Login</a>
       
     </div>
-</body>
+</body>    
+<hr>
+<CompInfoText></CompInfoText>
