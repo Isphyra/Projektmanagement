@@ -225,4 +225,5 @@ export default {
   getPersonal,
   createPersonal,
   deletePersonal,
+  //handleData in login
 };
