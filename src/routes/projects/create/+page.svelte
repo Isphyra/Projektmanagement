@@ -4,7 +4,7 @@
   let { form } = $props();
 </script>
 <div class="container mb-5 mt-5">
-  <a href="/projects" class="btn btn-dark">Zurück zu Liste</a>
+  <a href="/projects" class="btn btn-secondary">Zurück zu Liste</a>
 <h1 class="mt-4 mb">Neues Projekt erstellen</h1>
 <form method="POST" action="?/create">
   <div class="mb-3">
@@ -27,7 +27,7 @@
     <label for="" class="form-label">Personal:</label>
     <input name="teamMembers" class="form-control" type="text" placeholder="Personal, seperieren mit einem Komma" />
   </div>
-  <button type="submit" class="btn btn-primary">Projekt hinzufügen</button>
+  <button type="submit" class="btn btn-dark">Projekt hinzufügen</button>
 </form>
 
 {#if form?.success}

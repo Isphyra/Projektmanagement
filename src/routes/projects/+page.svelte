@@ -1,6 +1,5 @@
 <script>
   import Project from "$lib/components/projects.svelte";
-  import button from "$lib/components/CompInfoText.svelte";
   import CompInfoText from "$lib/components/CompInfoText.svelte";
   //import { derived } from "svelte/store";
   let { data, filterByFavList = false } = $props();
