@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import CalendarView from '$lib/components/CalendarView.svelte';
 
   let { form } = $props();
 </script>
@@ -33,4 +34,14 @@
 {#if form?.success}
   <p>Projekt erfolgreich erstellt</p>
 {/if}
+<div class="container-4 mt-5">
+<CalendarView></CalendarView>
 </div>
+</div>
+<style>
+  .container-4 {
+  max-width: 80%; /* Setzt die Breite auf die Hälfte */
+  margin: 0 auto; /* Zentriert den Kalender horizontal */
+}
+
+</style>
