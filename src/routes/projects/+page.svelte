@@ -60,7 +60,7 @@
   </div>
   <hr/>
 </div>
-<!--Divider-->
+
 
 <!--Auflistung-->
 <div class="container text-left mt-1">

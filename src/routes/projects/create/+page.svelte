@@ -10,23 +10,23 @@
 <form method="POST" action="?/create">
   <div class="mb-3">
     <label for="" class="form-label">Name des Projekts:</label>
-    <input name="name" class="form-control" type="text" />
+    <input name="name" class="form-control" type="text" required/>
   </div>
   <div class="mb-3">
     <label for="" class="form-label">Beschreibung:</label>
-    <input name="description" class="form-control" type="text" />
+    <input name="description" class="form-control" type="text" required/>
   </div>
   <div class="mb-3">
     <label for="" class="form-label">Startdatum:</label>
-    <input name="startDate" class="form-control" type="date" />
+    <input name="startDate" class="form-control" type="date" required/>
   </div>
   <div class="mb-3">
     <label for="" class="form-label">Enddatum:</label>
-    <input name="endDate" class="form-control" type="date" />
+    <input name="endDate" class="form-control" type="date" required/>
   </div>
   <div class="mb-3">
     <label for="" class="form-label">Personal:</label>
-    <input name="teamMembers" class="form-control" type="text" placeholder="Personal, seperieren mit einem Komma" />
+    <input name="teamMembers" class="form-control" type="text" placeholder="Personal, seperieren mit einem Komma"  required/>
   </div>
   <button type="submit" class="btn btn-dark">Projekt hinzufügen</button>
 </form>

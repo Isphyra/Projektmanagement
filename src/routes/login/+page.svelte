@@ -1,5 +1,4 @@
 <script>
-  import Messagebox from "$lib/components/messagebox.svelte";
 
   // Formular
   let userform = $state({
@@ -19,12 +18,12 @@
       <form onsubmit={handleData}>
           <div class="mb-3">
               <label class="form-label" for="">Benutzername</label>
-              <input bind:value={userform.vorname} class="form-control" type="text"> 
+              <input bind:value={userform.vorname} class="form-control" type="text" required> 
           </div>
 
           <div class="mb-3">
               <label class="form-label" for="">Passwort</label>
-              <input bind:value={userform.nachname} class="form-control" type="password"> 
+              <input bind:value={userform.nachname} class="form-control" type="password" required> 
           </div>
 
           <button type="submit" class="btn btn-dark"> Login </button>
