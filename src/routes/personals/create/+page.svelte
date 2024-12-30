@@ -21,8 +21,11 @@
     <button type="submit" class="btn btn-dark">Mitarbeiter/in hinzufügen</button>
   </form>
 
+
+<div class="mt-5">
   {#if form?.success}
   <p>Mitarbeiter/in erfolgreich erstellt</p>
 {/if}
+</div>
 </div>
 

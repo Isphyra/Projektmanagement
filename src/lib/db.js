@@ -170,7 +170,6 @@ async function createPersonal(personal) {
   return null;
 }
 
-/*
 async function updatePersonal(personal) {
   try {
     let id = personal._id;
@@ -192,7 +191,6 @@ async function updatePersonal(personal) {
   }
   return null;
 }
-*/
 
 async function deletePersonal(id) {
   try {
@@ -224,6 +222,7 @@ export default {
   getPersonals,
   getPersonal,
   createPersonal,
+  updatePersonal,
   deletePersonal,
   //handleData in login
 };
