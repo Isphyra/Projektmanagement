@@ -5,21 +5,12 @@ import { redirect } from "@sveltejs/kit";
 export async function load({ params }) {
     return {
         personal: await db.getPersonal(params.personal_id),
-    };
-}
-/*Delete Personal
-export const actions = {
-    delete: async ({ request }) => {
-        const data = await request.formData();
-
-        await db.deletePersonal(data.get("id"));
-        redirect(303, "/personals");
     }
-}*/
+}
 
 //Update Personal
 export const actions = {
-    update: async ({request}) => {
+    update: async ({ request }) => {
         const data = await request.formData();
         console.log(data);
         let personal = {
@@ -31,9 +22,15 @@ export const actions = {
 
         console.log(personal)
         await db.updatePersonal(personal);
+        return { success: true };
 
-        return {success: true};
+    },
+    
+    //Delete Personal
+    delete: async ({ request }) => {
+        const data = await request.formData();
 
+        await db.deletePersonal(data.get("id"));
+        redirect(303, "/personals");
     }
 }
-
