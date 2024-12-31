@@ -51,7 +51,7 @@
                 <input value={data.project.status} name="status" class="form-control" type="text" id="">
             </div>
 
-              <button class="btn btn-secondary mt-3">Update</button>
+              <button class="btn btn-secondary mt-3">Projekt updaten</button>
           </form>
 
           <div class="mt-3">
