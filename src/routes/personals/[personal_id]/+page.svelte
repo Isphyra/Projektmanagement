@@ -24,7 +24,7 @@
     <label class="form-label" for="">Email:</label>
     <input value={data.personal.email} name="email" class="form-control" type="text" id="">
 </div>
-<button class="btn btn-secondary mt-3">Update</button>
+<button class="btn btn-secondary mt-3">Mitarbeiter/in updaten</button>
 
 </form>
 <div class="mt-3">
