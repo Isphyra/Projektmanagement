@@ -4,7 +4,6 @@
     let personal = data.personal;
 </script>
 
-
 <!-- Zurück Button-->
 <div class="container mt-4">
     <a href="/personals" class="btn btn-dark mb-3">Zurück zu Liste</a>
@@ -25,7 +24,7 @@
     <label class="form-label" for="">Email:</label>
     <input value={data.personal.email} name="email" class="form-control" type="text" id="">
 </div>
-<button class="btn btn-secondary mt-3">Update!</button>
+<button class="btn btn-secondary mt-3">Update</button>
 
 </form>
 <div class="mt-3">

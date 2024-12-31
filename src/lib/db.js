@@ -73,7 +73,7 @@ async function createProject(project) {
 async function updateProject(project) {
   try {
     let id = project._id;
-    delete project._id; // delete the _id from the object, because the _id cannot be updated
+    delete project._id; 
     const collection = db.collection("projects");
     const query = { _id: new ObjectId(id) }; // filter by id
     const result = await collection.updateOne(query, { $set: project });
@@ -219,6 +219,7 @@ export default {
   getProject,
   createProject,
   deleteProject,
+  updateProject,
   getPersonals,
   getPersonal,
   createPersonal,

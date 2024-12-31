@@ -1,34 +1,100 @@
 <script>
-    export let data;
-    let project = data.project;
-  </script>
-  
-  <div class="container mt-4">
-    <a href="/projects" class="btn btn-dark mb-3">Zurück zu Liste</a>
-    <div>
-  </div>
-  <h1>{project.name}</h1>
-  <h3>Status: {project.status}</h3>
-  <div class="row mt-3">
-    <div class="col-3">
-      <img class="img-fluid" src={project.poster} alt="" />
-    </div>
-  
-    <div class="col">
-      <p> {project.description}</p>
-      <p>Startdatum: {project.startDate}</p>
-      <p>Enddatum: {project.endDate}</p>
-      <p>Mitarbeiter:</p>
-      <ul>
-        {#each project.teamMembers as member}
-          <li>{member}</li>
-        {/each}
-      </ul>
-      <form method="POST" action="?/delete">
-        <input type="hidden" name="id" value={project._id}>
-        <button class="btn btn-danger">Projekt löschen</button>
-      </form>
-    </div>
+  let { data, form } = $props();
+  // für Projekt löschen
+  let project = data.project;
+</script>
+
+<!-- Zurück Button-->
+<div class="container mt-4">
+  <a href="/projects" class="btn btn-dark mb-3">Zurück zu Liste</a>
+</div>
+  <div class="form-container">
+    <h1 class="mb-5">{project.name}</h1>
+    <hr>
+
+  <div class="project-container">
+      <!-- Bild -->
+      <div class="image-container">
+          <img class="img-fluid" src={project.poster} alt="Projekt Poster" height="300px" width="300" />
+      </div>
+
+      <!-- Tabelle -->
+      <div class="form-container">
+        <h3>Projekt bearbeiten</h3>
+
+          <!-- Projekt Daten + Update Button -->
+          <form method="POST" action="?/update">
+              <input name="id" type="hidden" value={data.project._id}>
+
+              <div class="mt-3">
+                  <label class="form-label" for="">Name</label>
+                  <input value={data.project.name} name="name" class="form-control" type="text" id="">
+              </div>
+              <div class="mt-3">
+                  <label class="form-label" for="">Beschreibung:</label>
+                  <input value={data.project.description} name="description" class="form-control" type="text" id="">
+              </div>
+              <div class="mt-3">
+                  <label class="form-label" for="">Startdatum:</label>
+                  <input value={data.project.startDate} name="startDate" class="form-control" type="date" id="">
+              </div>
+              <div class="mt-3">
+                  <label class="form-label" for="">Enddatum:</label>
+                  <input value={data.project.endDate} name="endDate" class="form-control" type="date" id="">
+              </div>
+              <div class="mt-3">
+                  <label class="form-label" for="">Mitarbeiter/innen:</label>
+                  <input value={data.project.teamMembers} name="teamMembers" class="form-control" type="text" id="">
+              </div>
+
+              <button class="btn btn-secondary mt-3">Update</button>
+          </form>
+
+          <div class="mt-3">
+              <!-- Projekt löschen Button -->
+              <form method="POST" action="?/delete">
+                  <input type="hidden" name="id" value={data.project._id} />
+                  <button class="btn btn-danger">Projekt löschen</button>
+              </form>
+          </div>
+
+          <!-- Erfolgsmeldung -->
+          <div class="mt-3">
+              {#if form?.success === true}
+              Projekt erfolgreich aktualisiert
+              {/if}
+          </div>
+      </div>
   </div>
 </div>
-  
+
+<style>
+  h1 {
+      text-align: center;
+  }
+
+  h3 {
+      text-decoration: underline;
+      color: #000000;
+  }
+
+  .project-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+  }
+
+  .image-container {
+      flex: 1;
+      text-align: center;
+  }
+
+  .form-container {
+      flex: 2;
+  }
+
+  img {
+      max-width: 100%;
+      height: auto;
+  }
+</style>
