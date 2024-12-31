@@ -64,7 +64,7 @@
           </div>
 
           <!-- Erfolgsmeldung -->
-          <div class="mt-3">
+          <div class="mt-5">
               {#if form?.success === true}
               Projekt erfolgreich aktualisiert
               {/if}

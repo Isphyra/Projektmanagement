@@ -1,6 +1,7 @@
 <script>
+    // Daten und Formular aus den übergebenen Eigenschaften (Props) extrahieren
     let {data, form} = $props();
-    //für Mitarbieter/in Daten löschen
+    // Zugriff auf die persönliche Daten des Mitarbeiters
     let personal = data.personal;
 </script>
 
@@ -10,9 +11,11 @@
 
 <!-- Personal Daten + Update Button -->
 <form method="POST"  action="?/update">
+      <!-- Verstecktes Eingabefeld -->
     <input name="id" type="hidden" value={data.personal._id}>
 
 <div class="mt-3">
+    <!-- Eingabefeld -->
     <label class="form-label" for="">Name</label>
     <input value={data.personal.name} name="name" class="form-control" type="text" id="">
 </div>

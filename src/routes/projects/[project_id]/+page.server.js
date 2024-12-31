@@ -1,7 +1,7 @@
 import db from "$lib/db.js";
 import { redirect } from "@sveltejs/kit";
 
-//Load Project von der Datenbank
+//Load Funktion Project von der Datenbank
 export async function load({ params }) {
     return {
         project: await db.getProject(params.project_id),

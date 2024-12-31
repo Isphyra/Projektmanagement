@@ -3,8 +3,9 @@
   import CompInfoText from "$lib/components/CompInfoText.svelte";
     import ProjektButton from "$lib/components/ProjektButton.svelte";
   //import { derived } from "svelte/store";
-  let { data, filterByFavList = false } = $props();
 
+  // Zugriff auf übergebene Eigenschaften (Projektdaten und Favoriten-Filter)
+  let { data, filterByFavList = false } = $props();
   let projects = $derived.by(() => {
     if (filterByFavList) {
       let projectsFiltered = data.projects.filter(
