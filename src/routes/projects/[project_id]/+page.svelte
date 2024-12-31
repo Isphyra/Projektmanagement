@@ -5,12 +5,13 @@
 </script>
 
 <!-- Zurück Button-->
-<div class="container mt-4">
-  <a href="/projects" class="btn btn-dark mb-3">Zurück zu Liste</a>
+<div class="header-container container mt-4 mb-4">
+    <a href="/projects" class="btn btn-dark">Zurück zu Liste</a>
+    <div class="container">
+    <h1>{project.name}</h1>
 </div>
-  <div class="form-container">
-    <h1 class="mb-5">{project.name}</h1>
-    <hr>
+  </div>
+  <hr>
 
   <div class="project-container">
       <!-- Bild -->
@@ -70,35 +71,46 @@
           </div>
       </div>
   </div>
-</div>
 
-<style>
-  h1 {
-      text-align: center;
-  }
-
-  h3 {
-      text-decoration: underline;
-      color: #000000;
-  }
-
-  .project-container {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-  }
-
-  .image-container {
-      flex: 1;
-      text-align: center;
-  }
-
-  .form-container {
-      flex: 2;
-  }
-
-  img {
-      max-width: 100%;
-      height: auto;
-  }
-</style>
+  <style>
+    .header-container {
+        display: flex;
+        align-items: center; /* Vertikale Zentrierung */
+    }
+  
+    .header-container a {
+        margin: 0; /* Sicherstellen, dass kein zusätzlicher Außenabstand vorhanden ist */
+    }
+  
+    .header-container h1 {
+        margin: 0; /* Kein zusätzlicher Außenabstand bei der Überschrift */
+    }
+  
+    h1 {
+        text-align: center;
+    }
+  
+    h3 {
+        text-decoration: underline;
+    }
+  
+    .project-container {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+  
+    .image-container {
+        flex: 1;
+        text-align: center;
+    }
+  
+    .form-container {
+        flex: 2;
+    }
+  
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+  </style>
