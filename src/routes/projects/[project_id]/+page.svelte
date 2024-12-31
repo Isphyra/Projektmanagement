@@ -46,6 +46,10 @@
                   <label class="form-label" for="">Mitarbeiter/innen:</label>
                   <input value={data.project.teamMembers} name="teamMembers" class="form-control" type="text" id="">
               </div>
+              <div class="mt-3">
+                <label class="form-label" for="">Status:</label>
+                <input value={data.project.status} name="status" class="form-control" type="text" id="">
+            </div>
 
               <button class="btn btn-secondary mt-3">Update</button>
           </form>

@@ -42,4 +42,9 @@
     {
       color: rgb(160, 151, 154);
     }
+    img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
   </style>

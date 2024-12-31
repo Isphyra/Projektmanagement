@@ -19,7 +19,8 @@ update: async ({ request }) => {
             description: data.get("description"),
             startDate: data.get("startDate"),
             endDate: data.get("endDate"),
-            teamMembers: data.get("teamMembers")
+            teamMembers: data.get("teamMembers"),
+            status: data.get("status")
         }
 
         console.log(project)
