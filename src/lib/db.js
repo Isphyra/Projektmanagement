@@ -69,7 +69,7 @@ async function createProject(project) {
   return null;
 }
 
-/*returns: id of the updated project or null, if project could not be updated
+//returns: id of the updated project or null, if project could not be updated
 async function updateProject(project) {
   try {
     let id = project._id;
@@ -91,7 +91,7 @@ async function updateProject(project) {
   }
   return null;
   
-}*/
+}
 
 // delete project by id
 // returns: id of the deleted project or null, if project could not be deleted

@@ -1,5 +1,6 @@
 <script>
     let {data, form} = $props();
+    //für Mitarbieter/in Daten löschen
     let personal = data.personal;
 </script>
 
@@ -8,7 +9,7 @@
 <div class="container mt-4">
     <a href="/personals" class="btn btn-dark mb-3">Zurück zu Liste</a>
 
-
+<!-- Personal Daten + Update Button -->
 <form method="POST"  action="?/update">
     <input name="id" type="hidden" value={data.personal._id}>
 
@@ -27,11 +28,13 @@
 <button class="btn btn-secondary mt-3">Update!</button>
 
 </form>
+<div class="mt-3">
 <!-- Personal löschen Button -->
 <form method="POST" action="?/delete">
     <input type="hidden" name="id" value={data.personal._id} />
     <button class="btn btn-danger">Mitarbeiter/in löschen</button>
 </form>
+</div>
 
 <!-- Erfolgsmeldung -->
 <div class="mt-3">
