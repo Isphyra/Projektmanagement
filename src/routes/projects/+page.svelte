@@ -19,7 +19,7 @@
 
 <div class="container mb-5 mt-5">
   <div class="container text-center">
-    <h1>Projektliste</h1>
+    <h1>Projektübersicht</h1>
     <p>
       Diese Seite dient zur Verwaltung von Projekten. Sie bietet eine Übersicht
       über aktuelle Projekte, einschließlich einer kurzen Beschreibung. Über die

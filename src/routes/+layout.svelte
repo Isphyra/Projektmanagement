@@ -28,7 +28,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/projects">Projekte</a>
+          <a class="nav-link active" aria-current="page" href="/projects">Projektübersicht</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/personals">Personalliste</a>
