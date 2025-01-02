@@ -6,7 +6,7 @@
 
   // Zugriff auf übergebene Eigenschaften (Projektdaten und Favoriten-Filter)
   let { data, filterByFavList=false } = $props();
-  //wenn sich was ändern führt es dies Fuktion aus
+  //wenn sich projects ändern führt es dies Fuktion aus
   let projects = $derived.by(() => {
 
     if (filterByFavList) {
@@ -42,7 +42,7 @@
   </div>
 
   <!-- Favoriten -->
-  <div class="form-check">
+  <div class="form form-switch">
     <input class="form-check-input" type="checkbox" bind:checked={filterByFavList} id="flexCheckDefault">
     <label class="form-check-label" for="flexCheckDefault">
       Nur Favoriten anzeigen
