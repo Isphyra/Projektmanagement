@@ -10,6 +10,7 @@ export async function load() {
 export const actions = {
     addToFav: async ({request}) => {
       let data = await request.formData();
+      
       let id = data.get("id");
       let project = { 
         _id: id,

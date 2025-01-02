@@ -1,20 +1,29 @@
 <script>
   import Project from "$lib/components/projects.svelte";
   import CompInfoText from "$lib/components/CompInfoText.svelte";
-    import ProjektButton from "$lib/components/ProjektButton.svelte";
-  //import { derived } from "svelte/store";
+  import ProjektButton from "$lib/components/ProjektButton.svelte";
+  import { derived } from "svelte/store";
 
   // Zugriff auf übergebene Eigenschaften (Projektdaten und Favoriten-Filter)
-  let { data, filterByFavList = false } = $props();
+  let { data, filterByFavList=false } = $props();
+  //wenn sich was ändern führt es dies Fuktion aus
   let projects = $derived.by(() => {
+
     if (filterByFavList) {
-      let projectsFiltered = data.projects.filter(
-        (project) => movie.projectlist,
-      );
-      return projectsFiltered;
-    }
+
+      let favFiltered = data.projects;
+
+      // Filtern der Projekte nach Favoriten
+      favFiltered = favFiltered.filter((project) => project.projectlist === true);
+
+      return favFiltered;
+    } else {
     return data.projects;
-  });
+    }
+  })
+
+
+
 </script>
 
 <div class="container mb-5 mt-5">
@@ -28,20 +37,15 @@
     </p>
     <!-- Button zum hinzufügen -->
      <ProjektButton> </ProjektButton>
-    
+
     
   </div>
 
   <!-- Favoriten -->
-  <div class="form-check mt-5 mb-1">
-    <input
-      class="form-check-input"
-      type="checkbox"
-      id="filter"
-      bind:checked={filterByFavList}
-    />
-    <label class="form-check-label" for="filter">
-      Meine Favoriten anzeigen
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" bind:checked={filterByFavList} id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+      Nur Favoriten anzeigen
     </label>
   </div>
   <hr/>
@@ -51,7 +55,7 @@
 <!--Auflistung-->
 <div class="container text-left mt-1">
   <div class="row">
-    {#each data.projects as project}
+    {#each projects as project}
       <div class="col-md-3 mb-4">
         <Project {project} />
       </div>

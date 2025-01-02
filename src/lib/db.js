@@ -82,7 +82,7 @@ async function updateProject(project) {
       console.log("Kein Projekt mit Id " + id);
       // TODO: errorhandling
     } else {
-      console.log("Projekt mit Id " + id + " wurde erfolgreich gelöscht.");
+      console.log("Projekt mit Id " + id + " wurde erfolgreich geupdatet.");
       return id;
     }
   } catch (error) {
