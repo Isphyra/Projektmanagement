@@ -16,7 +16,7 @@
     <hr/>
 <!-- Liste-->
   </div>
-  <table class="table">
+  <table class="table-color">
     <thead>
       <tr>
         <th>ID</th>
@@ -49,3 +49,10 @@
 
   <CompInfoText></CompInfoText>
 </div>
+<style>
+  .table-color {
+    background-color: #2d2e33;
+    margin: auto;
+    width: 100%;
+  }
+</style>

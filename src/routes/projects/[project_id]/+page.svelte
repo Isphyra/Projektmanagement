@@ -64,7 +64,7 @@
           </div>
 
           <!-- Erfolgsmeldung -->
-          <div class="mt-5">
+          <div class="succes mt-3">
               {#if form?.success === true}
               Projekt erfolgreich aktualisiert
               {/if}
@@ -98,6 +98,7 @@
         display: flex;
         align-items: flex-start;
         gap: 20px;
+        width: 90%;
     }
   
     .image-container {
@@ -112,5 +113,8 @@
     img {
         max-width: 100%;
         height: auto;
+    }
+    .succes {
+        color:white
     }
   </style>

@@ -1,3 +1,19 @@
 body {
-    background-color: #000000;
+    background-color: #2c2c2c;
 }
+p,h1,h2,h3,h4,h5,h6 {
+    color: #ffffff;
+}
+th {
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid #ffffff;
+  }
+td {
+    color: white;
+    padding: 5px;
+    border-bottom: 1px solid #a3a3a3;
+  }
+  label {
+    color: white;
+  }

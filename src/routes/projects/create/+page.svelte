@@ -52,9 +52,11 @@
   </form>
 
   <!-- Erfolgsnachricht -->
+  <div class="succes mt-3">
   {#if form?.success}
     <p>Projekt erfolgreich erstellt</p>
   {/if}
+</div>
 
   <!-- Kalender -->
   <div class="container-4 mt-5">
