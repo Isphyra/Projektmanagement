@@ -17,3 +17,6 @@ td {
   label {
     color: white;
   }
+  hr {
+    border: 1px solid #ffffff;
+  }

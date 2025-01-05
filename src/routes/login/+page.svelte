@@ -16,6 +16,7 @@
             alert("Das Passwort muss mindestens 6 Zeichen lang sein.");
             return;
         }
+        // Wenn Benutzername zu kurz
         if (userform.benutzername.length < 3) {
             alert("Der Benutzername muss mindestens 3 Zeichen lang sein.");
             return;

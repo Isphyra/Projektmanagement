@@ -37,7 +37,6 @@
     </p>
     <!-- Button zum hinzufügen -->
      <ProjektButton> </ProjektButton>
-
     
   </div>
 
