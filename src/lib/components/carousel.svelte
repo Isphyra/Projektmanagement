@@ -4,7 +4,7 @@
             <img src="images/startseite.webp" class="d-block w-100" alt="startseite1">
         </div>
         <div class="carousel-item">
-            <img src="img/sphinx.jpg" class="d-block w-100" alt="startseite2">
+            <img src="images/startseite2.webp" class="d-block w-100" alt="startseite2">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
