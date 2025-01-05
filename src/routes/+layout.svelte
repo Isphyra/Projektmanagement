@@ -1,5 +1,4 @@
 <script>
-  //import "./styles.css";
   let { children } = $props();
 </script>
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
