@@ -46,4 +46,8 @@
         height: 400px;
         object-fit: cover;
     }
+    .card:hover {
+        transform: scale(1.10);
+    }
+
   </style>

@@ -9,7 +9,8 @@
   <div class="container text-center">
     <h1>Personalliste</h1>
     <p>
-      Diese Seite dient zur Verwaltung der Mitarbeiter und Mittarbeiterinnen.
+      Diese Seite dient zur Verwaltung der Mitarbeiter und Mittarbeiterinnen. 
+      Dazu ist es möglich, neue Mitarbeiter/innen hinzuzufügen, bestehende Mitarbeiter/innen zu bearbeiten oder zu löschen.
     </p>
 <!-- Butoon für neue Mitarbeiter/innen hinzufügen -->
  <Button></Button>
