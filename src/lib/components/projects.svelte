@@ -13,6 +13,7 @@
         <p><strong>Enddatum:</strong> {project.endDate}</p>
         <p class="card-status"><strong>Status:</strong> {project.status}</p>
     </div>
+    
     <div class="card-footer text-center mb-3">
         {#if project.projectlist}
             <form method="POST" action="?/removeFromFav" use:enhance>
