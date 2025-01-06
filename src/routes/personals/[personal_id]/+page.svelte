@@ -14,7 +14,8 @@
     <form method="POST" action="?/update">
         <!-- Verstecktes Eingabefeld -->
         <input name="id" type="hidden" value={data.personal._id} />
-
+        
+        <h3>Mitarbeiter/in bearbeiten</h3>
         <div class="mt-3">
             <!-- Eingabefeld -->
             <label class="form-label" for="">Name</label>
