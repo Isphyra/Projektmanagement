@@ -3,6 +3,12 @@
     let { data, form } = $props();
     // Zugriff auf die persönliche Daten des Mitarbeiters
     let personal = data.personal;
+
+    function confirmDelete(event) {
+        if (!confirm('Möchte Sie diesen Mitarbeiter, diese Mitarbeiterin löschen?')) {
+            event.preventDefault(); // Verhindert das Absenden des Formulars
+        }
+    }
 </script>
 
 <!-- Zurück Button-->
@@ -10,7 +16,7 @@
     <a href="/personals" class="btn btn-dark mb-3">Zurück zu Liste</a>
 
     <!-- Personal Daten + Update Button -->
-    <!-- Das Formular übermittelt die Daten per POST-Methode an den Server, wobei der action-Wert ?/update die Ausführung der Aktion „update“ signalisiert.n -->
+    <!-- Das Formular übermittelt die Daten per POST-Methode an den Server, wobei der action-Wert ?/update die Ausführung der Aktion „update“ signalisiert -->
     <form method="POST" action="?/update">
         <!-- Verstecktes Eingabefeld -->
         <input name="id" type="hidden" value={data.personal._id} />
@@ -52,7 +58,7 @@
     
     <div class="mt-3">
         <!-- Personal löschen Button -->
-        <form method="POST" action="?/delete">
+        <form method="POST" action="?/delete" onsubmit={confirmDelete}>
             <input type="hidden" name="id" value={data.personal._id} />
             <button class="btn btn-danger">Mitarbeiter/in löschen</button>
         </form>

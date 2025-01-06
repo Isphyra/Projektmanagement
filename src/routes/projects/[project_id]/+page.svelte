@@ -4,7 +4,7 @@
     let project = data.project;
   
     function confirmDelete(event) {
-        if (!confirm('Sind Sie sicher, dass Sie dieses Projekt löschen möchten?')) {
+        if (!confirm("Möchten Sie das Projekt wirklich löschen?")) {
             event.preventDefault(); // Verhindert das Absenden des Formulars
         }
     }
