@@ -36,6 +36,7 @@
     <!-- Breite 50%-->
     <div class="w-50 mt-5">
         <h1 class="text-center mb-5">Willkommen zum Login</h1>
+        <!-- Formular zum Einloggen -->
         <form onsubmit={handleData}>
             <div class="mb-3">
                 <label class="form-label" for="benutzername">Benutzername</label>
@@ -51,7 +52,7 @@
                 <label class="form-label" for="passwort">Passwort</label>
                 <input bind:value={userform.passwort} class="form-control" type="password" id="passwort" placeholder="min. 6 Zeichen" required> 
             </div>
-
+            <!-- Button zum Absenden des Formulars -->
             <button type="submit" class="btn btn-dark w-100">Login</button>
         </form>
     </div>
