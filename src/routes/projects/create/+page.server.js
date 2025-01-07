@@ -5,13 +5,12 @@ export const actions = {
         // Formulardaten abrufen
         const formData = await request.formData();
 
-        // Daten aus dem Formular extrahieren
         const project = {
             name: formData.get('name'),
             description: formData.get('description'),
-            startDate: formData.get('startDate'), // Startdatum aus dem Formular
-            endDate: formData.get('endDate'), // Enddatum aus dem Formular
-            teamMembers: formData.getAll('teamMembers'), // Mehrere Personalien als Array (falls Checkbox oder Multi-Select)
+            startDate: formData.get('startDate'),
+            endDate: formData.get('endDate'), 
+            teamMembers: formData.getAll('teamMembers'), 
         };
 
         try {

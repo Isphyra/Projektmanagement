@@ -1,11 +1,7 @@
-// Import der Datenbank-Instanz aus der Datei "$lib/db.js"
 import db from "$lib/db.js";
-// Import der "redirect"-Funktion aus dem SvelteKit-Paket
 import { redirect } from "@sveltejs/kit";
 
 //Load Personal von der Datenbank
-//async function macht es einfacher, mit asynchronem Code zu arbeiten
-//params ist ein Objekt, das die URL-Parameter enthält
 export async function load({ params }) {
     return {
         personal: await db.getPersonal(params.personal_id),

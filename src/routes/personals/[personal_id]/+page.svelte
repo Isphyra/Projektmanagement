@@ -16,9 +16,7 @@
     <a href="/personals" class="btn btn-secondary mb-3">Zurück zu Liste</a>
 
     <!-- Personal Daten + Update Button -->
-    <!-- Das Formular übermittelt die Daten per POST-Methode an den Server, wobei der action-Wert ?/update die Ausführung der Aktion „update“ signalisiert -->
     <form method="POST" action="?/update">
-        <!-- Verstecktes Eingabefeld -->
         <input name="id" type="hidden" value={data.personal._id} />
         
         <h3>Mitarbeiter/in bearbeiten</h3>
@@ -57,7 +55,7 @@
     </form>
     
     <div class="mt-3">
-        <!-- Personal löschen Button -->
+        <!-- Button -->
         <form method="POST" action="?/delete" onsubmit={confirmDelete}>
             <input type="hidden" name="id" value={data.personal._id} />
             <button class="btn btn-danger">Mitarbeiter/in löschen</button>
