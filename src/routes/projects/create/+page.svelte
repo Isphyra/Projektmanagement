@@ -1,7 +1,6 @@
 <script>
   // Importiere notwendige Module und Komponenten
   import { onMount } from "svelte"; // Optional, falls zukünftige Logik benötigt wird
-  import CalendarView from '$lib/components/CalendarView.svelte'; // Kalender-Komponente
 
   // Zugriff auf das Formularobjekt aus den übergebenen Eigenschaften (Props)
   let { form } = $props();
@@ -57,17 +56,5 @@
     <p>Projekt erfolgreich erstellt</p>
   {/if}
 </div>
-
-  <!-- Kalender -->
-  <div class="container-4 mt-5">
-    <CalendarView></CalendarView>
-  </div>
 </div>
 
-<!-- CSS für die Kalenderansicht -->
-<style>
-  .container-4 {
-    max-width: 80%; /* Begrenze die Breite auf 80% des Containers */
-    margin: 0 auto; /* Zentriert den Kalender horizontal */
-  }
-</style>
