@@ -12,7 +12,7 @@
   
 <!-- Zurück Button -->
 <div class="header-container container mt-4 mb-4">
-    <a href="/projects" class="btn btn-dark">Zurück zu Liste</a>
+    <a href="/projects" class="btn btn-secondary">Zurück zu Liste</a>
     <div class="container">
         <h1>{project.name}</h1>
     </div>

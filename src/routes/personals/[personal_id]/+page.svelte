@@ -13,7 +13,7 @@
 
 <!-- Zurück Button-->
 <div class="container mt-4">
-    <a href="/personals" class="btn btn-dark mb-3">Zurück zu Liste</a>
+    <a href="/personals" class="btn btn-secondary mb-3">Zurück zu Liste</a>
 
     <!-- Personal Daten + Update Button -->
     <!-- Das Formular übermittelt die Daten per POST-Methode an den Server, wobei der action-Wert ?/update die Ausführung der Aktion „update“ signalisiert -->
