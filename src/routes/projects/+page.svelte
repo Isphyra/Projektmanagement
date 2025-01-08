@@ -37,11 +37,10 @@
       Über die Schaltfläche "Neues Projekt erstellen" können neue Projekte
       hinzugefügt werden.
     </p>
-    <!-- Button zum Hinzufügen -->
+    <!-- Button -->
     <ProjektButton> </ProjektButton>
   </div>
 
-  <!-- Favoriten und Sortieren nebeneinander -->
   <div class="container mt-3">
     <div class="row align-items-center">
       <!-- Favoriten-Filter -->

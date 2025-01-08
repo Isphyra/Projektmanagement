@@ -2,10 +2,8 @@ import db from "$lib/db.js";
 
 export const actions = {
     create: async ({ request }) => {
-        // Formulardaten abrufen
         const formData = await request.formData();
 
-        // Daten aus dem Formular extrahieren
         const personal = {
             name: formData.get('name'),
             role: formData.get('role'),

@@ -19,7 +19,6 @@
             return;
         }
 
-        //Erfolgsmeldung
         alert("Login war erfolgreich, " + userform.benutzername);
 
         console.log("Benutzername:", userform.benutzername);

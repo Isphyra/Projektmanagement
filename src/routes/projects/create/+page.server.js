@@ -2,7 +2,6 @@ import db from "$lib/db.js";
 
 export const actions = {
     create: async ({ request }) => {
-        // Formulardaten abrufen
         const formData = await request.formData();
 
         const project = {
@@ -14,7 +13,6 @@ export const actions = {
         };
 
         try {
-            // Projekt in der Datenbank erstellen
             const id = await db.createProject(project);
 
             if (id) {

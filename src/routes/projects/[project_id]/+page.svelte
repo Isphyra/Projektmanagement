@@ -1,11 +1,10 @@
 <script>
     let { data, form } = $props();
-    // für Projekt löschen
     let project = data.project;
   
     function confirmDelete(event) {
         if (!confirm("Möchten Sie das Projekt wirklich löschen?")) {
-            event.preventDefault(); // Verhindert das Absenden des Formulars
+            event.preventDefault();
         }
     }
 </script>
@@ -61,7 +60,7 @@
             <button class="btn btn-secondary mt-3">Projekt updaten</button>
         </form>
   
-        <!-- Projekt löschen Button -->
+        <!--  Button -->
         <div class="mt-3">
             <form id="delete-form" method="POST" action="?/delete" onsubmit={confirmDelete}>
                 <input type="hidden" name="id" value={data.project._id} />
@@ -81,15 +80,15 @@
 <style>
     .header-container {
         display: flex;
-        align-items: center; /* Vertikale Zentrierung */
+        align-items: center;
     }
 
     .header-container a {
-        margin: 0; /* Sicherstellen, dass kein zusätzlicher Außenabstand vorhanden ist */
+        margin: 0;
     }
 
     .header-container h1 {
-        margin: 0; /* Kein zusätzlicher Außenabstand bei der Überschrift */
+        margin: 0;
     }
 
     h1 {

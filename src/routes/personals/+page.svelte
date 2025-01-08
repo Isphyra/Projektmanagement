@@ -12,7 +12,7 @@
       Diese Seite dient zur Verwaltung der Mitarbeiter und Mittarbeiterinnen. 
       Dazu ist es möglich, neue Mitarbeiter/innen hinzuzufügen, bestehende Mitarbeiter/innen zu bearbeiten oder zu löschen.
     </p>
-<!-- Butoon für neue Mitarbeiter/innen hinzufügen -->
+<!-- Butoon -->
  <Button></Button>
     <hr/>
 <!-- Liste-->

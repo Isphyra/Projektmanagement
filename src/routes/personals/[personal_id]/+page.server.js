@@ -1,7 +1,6 @@
 import db from "$lib/db.js";
 import { redirect } from "@sveltejs/kit";
 
-//Load Personal von der Datenbank
 export async function load({ params }) {
     return {
         personal: await db.getPersonal(params.personal_id),

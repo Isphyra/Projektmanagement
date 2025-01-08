@@ -1,12 +1,10 @@
 <script>
-    // Daten und Formular aus den übergebenen Eigenschaften (Props) extrahieren
     let { data, form } = $props();
-    // Zugriff auf die persönliche Daten des Mitarbeiters
     let personal = data.personal;
 
     function confirmDelete(event) {
         if (!confirm('Möchte Sie diesen Mitarbeiter, diese Mitarbeiterin löschen?')) {
-            event.preventDefault(); // Verhindert das Absenden des Formulars
+            event.preventDefault();
         }
     }
 </script>

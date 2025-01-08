@@ -9,7 +9,6 @@
   <!-- Formulars -->
   <h1 class="mt-4 mb">Neues Personal erstellen</h1>
 
-  <!-- Formular -->
   <form method="POST" action="?/create">
       <div class="mb-3">
           <label for="" class="form-label">Name des Mitarbeiter/in:</label>
