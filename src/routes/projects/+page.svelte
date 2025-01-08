@@ -14,7 +14,7 @@
     });
   }
 
-  // Zugriff auf übergebene Eigenschaften (Projektdaten und Favoriten-Filter)
+  //Favoriten-Filter
   let { data, filterByFavList = false } = $props();
   
   let projects = $derived.by(() => {
